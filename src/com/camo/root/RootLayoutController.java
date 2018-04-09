@@ -5,6 +5,7 @@ import java.io.IOException;
 import com.camo.MainApp;
 import com.camo.aircraft.AircraftOverviewController;
 import com.camo.customer.CustomerOverviewController;
+import com.camo.flight.FlightOverviewController;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -96,6 +97,11 @@ public class RootLayoutController {
             AnchorPane CustomerOverview = (AnchorPane) loader.load();            
             
             mainApp.newTab("Liste des vols", CustomerOverview);
+            
+            FlightOverviewController controller = loader.getController();
+            controller.setFlightsData(FXCollections.observableArrayList(mainApp.getVolDao().lister()));
+            controller.setMainApp(mainApp);
+            
     	} catch (IOException e) {
             e.printStackTrace();
         }

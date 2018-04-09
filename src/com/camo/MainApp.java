@@ -8,6 +8,8 @@ import com.camo.root.RootLayoutController;
 import com.camo.dao.AircraftDAO;
 import com.camo.dao.EntityManagerUtil;
 import com.camo.dao.UtilisateurDAO;
+import com.camo.dao.VolDAO;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -29,6 +31,7 @@ public class MainApp extends Application {
     
     private UtilisateurDAO utilisateurDao = new UtilisateurDAO(em);
     private AircraftDAO aircraftDao = new AircraftDAO(em);
+    private VolDAO volDao = new VolDAO(em);
     
     /**
      * The data as an observable list of Persons.
@@ -141,5 +144,13 @@ public class MainApp extends Application {
 
 	public AircraftDAO getAircraftDao() {
 		return aircraftDao;
+	}
+
+	public VolDAO getVolDao() {
+		return volDao;
+	}
+
+	public void setVolDao(VolDAO volDao) {
+		this.volDao = volDao;
 	}
 }

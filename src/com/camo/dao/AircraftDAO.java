@@ -2,7 +2,6 @@ package com.camo.dao;
 
 import java.util.List;
 
-
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
@@ -10,7 +9,6 @@ import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import com.camo.entities.Aircraft;
-import com.camo.entities.Utilisateur;
 
 public class AircraftDAO {
 	
@@ -61,7 +59,7 @@ public class AircraftDAO {
         try {
         	em.getTransaction().begin();
             em.persist( aircraft );
-            em.getTransaction().commit();;
+            em.getTransaction().commit();
         } catch ( Exception e ) {
         	em.getTransaction().rollback();
             throw new DAOException( e );

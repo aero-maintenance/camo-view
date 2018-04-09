@@ -4,6 +4,7 @@
   <persistence-unit name="test" transaction-type="RESOURCE_LOCAL">
     <class>com.camo.entities.Utilisateur</class>
     <class>com.camo.entities.Aircraft</class>
+    <class>com.camo.entities.Vol</class>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
       <property name="javax.persistence.jdbc.url"    value="jdbc:mysql://localhost/db_softwair" />
