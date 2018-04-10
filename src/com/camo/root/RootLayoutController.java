@@ -4,10 +4,13 @@ import java.io.IOException;
 
 import com.camo.MainApp;
 import com.camo.aircraft.AircraftOverviewController;
+import com.camo.alert.AlertOverviewController;
 import com.camo.customer.CustomerOverviewController;
+import com.camo.entities.Alerte;
 import com.camo.flight.FlightOverviewController;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
@@ -116,6 +119,31 @@ public class RootLayoutController {
         mainApp.newTab("Liste des clients", CustomerOverview);
     }*/
     
+    @FXML
+    private void handleAlertManagement() {
+    	
+		try {
+			FXMLLoader loader = new FXMLLoader();
+	        loader.setLocation(MainApp.class.getResource("alert/AlertOverview.fxml"));
+	        AnchorPane AlertOverview;
+			AlertOverview = (AnchorPane) loader.load();
+			
+			mainApp.newTab("Alertes", AlertOverview);
+			AlertOverviewController controller = loader.getController();
+			ObservableList<Alerte> alertData = FXCollections.observableArrayList();
+			alertData.add(new Alerte("F-AAWY","Cessna 172 R","Visite 50H","6H"));
+			alertData.add(new Alerte("F-AAWY","Cessna 172 R","Visite 100H","6H"));
+			alertData.add(new Alerte("F-AAWY","Cessna 172 R","OVH helice","15H"));
+			alertData.add(new Alerte("F-AAWY","Cessna 172 R","AD 2007-05-10","5J"));
+			controller.setAlertData(alertData);
+			controller.setMainApp(mainApp);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}            
+        
+        
+    }
     
     
 }

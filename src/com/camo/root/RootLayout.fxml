@@ -67,7 +67,7 @@
                                     <Button layoutX="10.0" layoutY="67.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAircraftManagement" text="Gestion des aéronefs" GridPane.rowIndex="1" />
                                     <Button layoutX="10.0" layoutY="112.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Inventaire" GridPane.rowIndex="4" />
                                     <Button layoutX="10.0" layoutY="112.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Gestion du personnel" GridPane.rowIndex="2" />
-                                    <Button layoutX="10.0" layoutY="202.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Alertes" GridPane.rowIndex="5" />
+                                    <Button layoutX="10.0" layoutY="202.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAlertManagement" text="Alertes" GridPane.rowIndex="5" />
                                     <Button layoutX="15.0" layoutY="73.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleFlightList" text="Liste des vols" GridPane.rowIndex="3" />
                                  </children>
                                  <padding>

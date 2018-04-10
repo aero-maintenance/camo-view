@@ -47,7 +47,7 @@
                <top>
                   <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                     <buttons>
-                        <TextField fx:id="researshField" promptText="Immatriculation" />
+                        <TextField fx:id="researchField" promptText="Immatriculation" />
                     </buttons>
                   </ButtonBar>
                </top>

@@ -28,7 +28,7 @@ import javafx.stage.Stage;
 public class AircraftOverviewController {
 	
 	@FXML
-	private TextField researshField;
+	private TextField researchField;
 	@FXML
     private TableView<Aircraft> aircraftTable;
 	@FXML
@@ -74,7 +74,7 @@ public class AircraftOverviewController {
         
         
         //Recherche automatique
-        researshField.textProperty().addListener((obs, oldText, newText) -> {
+        researchField.textProperty().addListener((obs, oldText, newText) -> {
             
             if(newText.length()==0) {
             	System.out.println("Text changed from "+oldText+" to "+newText);
@@ -175,7 +175,7 @@ public class AircraftOverviewController {
         this.mainApp = mainApp;
 
      // Add observable list data to the table
-        aircraftTable.setItems(getAircraftData());
+        aircraftTable.setItems(aircraftData);
     }
 
 	public ObservableList<Aircraft> getAircraftData() {
