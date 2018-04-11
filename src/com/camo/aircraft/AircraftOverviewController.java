@@ -99,8 +99,19 @@ public class AircraftOverviewController {
                     Aircraft rowData = row.getItem();
                     System.out.println("Double click on: "+rowData.getImmatriculation());
                     //Ajouter l'ouverture de onglet avec le kardex de l'avion sélectionné
+                    
+                 // Load  kardex overview.
+                    try {
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(MainApp.class.getResource("kardex/kardex_overview.fxml"));
+                    AnchorPane kardex_overview = (AnchorPane) loader.load();            
+                    
+                    mainApp.newTab("Kardex "+rowData.getImmatriculation(), kardex_overview);
+                 } catch (IOException e) {
+                    e.printStackTrace();
                 }
-            });
+                    
+            }});
             return row ;
         });
     }

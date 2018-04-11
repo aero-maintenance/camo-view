@@ -133,7 +133,7 @@ public class RootLayoutController {
 			ObservableList<Alerte> alertData = FXCollections.observableArrayList();
 			alertData.add(new Alerte("F-AAWY","Cessna 172 R","Visite 50H","6H"));
 			alertData.add(new Alerte("F-AAWY","Cessna 172 R","Visite 100H","6H"));
-			alertData.add(new Alerte("F-AAWY","Cessna 172 R","OVH helice","15H"));
+			alertData.add(new Alerte("F-AAWY","Cessna 172 R","OVH helice","71H"));
 			alertData.add(new Alerte("F-AAWY","Cessna 172 R","AD 2007-05-10","5J"));
 			controller.setAlertData(alertData);
 			controller.setMainApp(mainApp);

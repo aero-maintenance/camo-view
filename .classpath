@@ -2,6 +2,11 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+<<<<<<< HEAD
+=======
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Referenced Libraries"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Librairie"/>
+>>>>>>> d97a5c6f7821d166b5e6fce2022beb6495666dcd
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Referenced Libraries"/>
 	<classpathentry kind="output" path="bin"/>

@@ -6,11 +6,9 @@ import com.camo.entities.Alerte;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
 
 public class AlertOverviewController {
 	
@@ -40,8 +38,6 @@ public class AlertOverviewController {
 		modelColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getModel()));
 		designationColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDesignation()));
 		limiteColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getLimite()));
-		
-		
 	}
 	
 	public MainApp getMainApp() {
